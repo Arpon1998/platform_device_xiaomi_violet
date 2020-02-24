@@ -143,3 +143,67 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_app_phase_offset_ns=500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
     debug.sf.early_gl_app_phase_offset_ns=15000000
+
+# Thermal
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.thermal.data.path=/data/vendor/thermal/
+
+# Time service
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true
+
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.diag_mdlog_enable=false
+
+# Misc
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.ssr.restart_level=ALL_ENABLE \
+    sys.vendor.shutdown.waittime=500 \
+    persist.sys.df.extcolor.proc=0 \
+    persist.sys.job_delay=true \
+    persist.sys.sar.dsi=7 \
+    persist.vendor.qcomsysd.enabled=1 \
+    persist.vendor.qg.log_level=1 \
+    ro.colorpick_adjust=true \
+    ro.hardware.keystore_desede=true \
+    ro.logd.size=1M \
+    ro.vendor.df.effect.conflict=1 \
+    sys.boe_hx8394f_length=35 \
+    sys.boe_hx8394f_offset=11 \
+    sys.paper_mode_max_level=32 \
+    sys.truly_otm1901a_length=42 \
+    sys.truly_otm1901a_offset=1 \
+    ro.hardware.nfc_nci=nqx.default \
+    persist.backup.ntpServer=0.pool.ntp.org \
+    ro.emmc_size=16GB \
+    ro.cutoff_voltage_mv=3400
+
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.use_fifo_ui=0
+
+# Perf
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    vendor.perflocks_customized_for_apps=1 \
+    vendor.perf.gestureflingboost.enable=true
+
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.bservice_enable=true \
+    ro.vendor.qti.sys.fw.bservice_limit=5 \
+    ro.vendor.qti.sys.fw.bservice_age=5000
+
+# Ram Tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.fha_enable=true \
+    ro.sys.fw.bg_apps_limit=32 \
+    ro.config.dha_cached_max=16 \
+    ro.config.dha_empty_max=42 \
+    ro.config.dha_empty_init=32 \
+    ro.config.dha_lmk_scale=0.545 \
+    ro.config.dha_th_rate=2.3 \
+    ro.config.sdha_apps_bg_max=64 \
+    ro.config.sdha_apps_bg_min=8
