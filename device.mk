@@ -28,7 +28,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pe
+    $(LOCAL_PATH)/overlay-aosip
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -170,6 +170,14 @@ PRODUCT_PACKAGES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
+
+# DerpFest Customs
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_GAPPS_ARCH := arm64
+DERP_BUILDTYPE := Official
+BUILD_DATE := $(shell date +"%Y%m%d-%H%M%S")
+IS_PHONE := true
+CURRENT_BUILD_TYPE := gapps
 
 # Display
 PRODUCT_PACKAGES += \
