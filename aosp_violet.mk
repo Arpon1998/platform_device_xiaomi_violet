@@ -15,7 +15,7 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some common AospExtended stuff.
 TARGET_INCLUDE_WIFI_EXT := true
-EXTENDED_BUILD_TYPE := Kevin87
+EXTENDED_BUILD_TYPE := OFFICIAL
 TARGET_INCLUDE_STOCK_ARCORE := true
 $(call inherit-product, vendor/aosp/common.mk)
 
