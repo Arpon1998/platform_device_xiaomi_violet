@@ -8,7 +8,7 @@
 $(call inherit-product-if-exists, vendor/xiaomi/violet/violet-vendor.mk)
 
 # ANXCamera
-$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
+$(call inherit-product-if-exists, vendor/ANXCamera/config.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
