@@ -54,6 +54,9 @@ function blob_fixup() {
     vendor/lib64/camera/components/com.qti.node.watermark.so)
     "${PATCHELF}" --add-needed "libwatermark_shim.so" "${2}"
     ;;
+    vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc)
+        sed -i "s/4\.0/4\.1/g" "${2}"
+        ;;
     esac
 }
 
