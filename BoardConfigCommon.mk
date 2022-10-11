@@ -50,6 +50,11 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 
+# MiuiCamera
+ifeq ($(SHIP_ANX), true)
+-include vendor/xiaomi/miuicamera/BoardConfigAnx.mk
+endif
+
 # Dex
 WITH_DEXPREOPT_DEBUG_INFO := false
 DONT_DEXPREOPT_PREBUILTS := true
